@@ -64,7 +64,7 @@ def run_code(keyword_map, text):
 if __name__ == "__main__":
     if (len(sys.argv) < 2 or len(sys.argv) > 4 or
         (sys.argv[1] != "-i" and len(sys.argv) == 4)):
-        print("Usage: ./brainnyan.py [-i] input.b > output.spl")
+        print("Usage: ./brainnyan.py [-i] <keyword mapping file> <code file>")
         sys.exit(2)
 
     case_sensitive = True
