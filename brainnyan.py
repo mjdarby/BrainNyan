@@ -19,7 +19,9 @@ def read_keywords(json_string):
     return keyword_map
 
 def strip_non_keywords(keyword_map, text):
-    regex = "|".join([re.escape(x) for x in keyword_map.keys()])
+    keywords_by_length = list(keyword_map.keys())
+    keywords_by_length.sort(key=lambda s:-len(s))
+    regex = "|".join([re.escape(x) for x in keywords_by_length])
     regex = "(" + regex + ")"
     split = re.split(regex, text)
     stripped = [x for x in split if x in keyword_map.keys()]
