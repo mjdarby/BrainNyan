@@ -80,7 +80,3 @@ We receive the following output:
     Hello World!
 
 Truly, this is a modern wonder.
-
-Things to do
-============
-* Figure out what happens if keywords are prefixes of each other (eg. Keywords 'n', 'ne', 'nek' and 'neko')
